@@ -1,18 +1,17 @@
 # Emotion Detection Project
-This project aims to classify facial expressions into 7 categories: angry, neutral, disgust, surprise, sad, fear, and happy. The dataset used for this project is the FER2013 dataset, which can be found on Kaggle: FER2013 Dataset.
+This project aims to classify the emotion on a person's face into one of seven categories, using deep convolutional neural networks. The model is trained on the FER-2013 dataset which was published on International Conference on Machine Learning (ICML). This dataset consists of 35887 grayscale, 48x48 sized face images with seven emotions - angry, disgusted, fearful, happy, neutral, sad and surprised.
 
-# Model Architectures
-## Custom Architecture
-Initially, a custom architecture was designed, but it did not achieve satisfactory accuracy and recall.
+# Dependencies
+- python3, [Tensorflow](https://www.tensorflow.org/), [Keras](https://keras.io/)<br>
+- To install the required packages `pip install -r requirements.txt`
 
-## Data Augmentation
-To address the imbalance in the dataset, data augmentation techniques were applied. Despite this, the custom architecture did not yield improved results.
+# Basic usage
+The repository is currently compatible with `tensorflow-2.0` and makes use of the Keras API using the `tensorflow.keras` library.
 
-## Transfer Learning
-Transfer learning was then employed by fine-tuning the VGG16 model. While this approach improved accuracy, recall remained suboptimal.
-
-## ResNet50 with Data Augmentation and Class Weights
-Finally, the ResNet50 model was used with data augmentation and class weights to handle the imbalance in the data. This approach resulted in a final accuracy of 67% and an average recall of 63% after just 10 epochs.
-
-## Conclusion
-The combination of ResNet50, data augmentation, and class weights proved to be the most effective approach for this emotion detection project. Further optimization and experimentation could potentially improve the model's performance
+- Firstly clone the Repository
+```
+git clone https://github.com/TMVKasiViswanath/Emotion-Detection.git
+cd Emotion-Detection
+```
+- Download the FER-2013 dataset [Dataset](https://www.kaggle.com/datasets/msambare/fer2013)
+-
