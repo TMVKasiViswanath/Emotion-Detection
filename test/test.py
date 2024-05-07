@@ -8,7 +8,7 @@ face_classifier = cv2.CascadeClassifier(r'haarcascade_frontalface_default.xml')
 
 # Load the pre-trained emotion classification model
 # Uncomment the model you want to use and make sure the path is correct
-classifier = load_model(r'Custom_CNN_model.keras')
+classifier = load_model('/ResNet50_Transfer_Learning/ResNet50_Transfer_Learning.keras')
 # classifier = load_model(r'Final_Resnet50_Best_model.keras')
 
 # Define the list of emotion labels
