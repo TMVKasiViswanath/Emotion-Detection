@@ -10,7 +10,6 @@ To address the imbalance in the dataset, data augmentation techniques were appli
 
 ## Transfer Learning
 Transfer learning was then employed by fine-tuning the VGG16 model. While this approach improved accuracy, recall remained suboptimal.
-![Alt Text](https://app.gemoo.com/share/image-annotation/646385369401106432?codeId=PalnKzoonGdAV&origin=imageurlgenerator&card=646385365840142336)
 
 ## ResNet50 with Data Augmentation and Class Weights
 Finally, the ResNet50 model was used with data augmentation and class weights to handle the imbalance in the data. This approach resulted in a final accuracy of 67% and an average recall of 63% after just 10 epochs.
