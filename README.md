@@ -14,4 +14,28 @@ git clone https://github.com/TMVKasiViswanath/Emotion-Detection.git
 cd Emotion-Detection
 ```
 - Download the FER-2013 dataset [Dataset](https://www.kaggle.com/datasets/msambare/fer2013)
-- 
+- If you want to train this model, use:
+ ```
+ cd Training
+ python train.py
+ ```
+-All the best weights will be stored inside the test directory as `ResNet50_Transfer_Learning.keras`, so to test the model use:
+```
+cd ../test
+python test.py
+```
+-This implementation by default detects emotions on all faces in the webcam feed. With a simple 4-layer CNN, the test accuracy reached 67% with average recall of 63% in 40 epochs.<br>
+
+## Model Architectures
+### Custom Architecture
+Initially, a custom architecture was designed, but it did not achieve satisfactory accuracy and recall.
+
+### Data Augmentation
+To address the imbalance in the dataset, data augmentation techniques were applied. Despite this, the custom architecture did not yield improved results.
+
+### Transfer Learning
+Transfer learning was then employed by fine-tuning the VGG16 model. While this approach improved accuracy, recall remained suboptimal.
+
+### ResNet50 with Data Augmentation and Class Weights
+Finally, the ResNet50 model was used with data augmentation and class weights to handle the imbalance in the data. This approach resulted in a final accuracy of 67% and an average recall of 63% after just 10 epochs.
+
