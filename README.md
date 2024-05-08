@@ -19,12 +19,13 @@ cd Emotion-Detection
  cd Training
  python train.py
  ```
--All the best weights will be stored inside the test directory as `ResNet50_Transfer_Learning.keras`, so to test the model use:
+- All the best weights will be stored inside the test directory as `ResNet50_Transfer_Learning.keras`, so to test the model use:
 ```
 cd ../test
 python test.py
 ```
--This implementation by default detects emotions on all faces in the webcam feed. With a simple 4-layer CNN, the test accuracy reached 67% with average recall of 63% in 40 epochs.<br>
+- This implementation by default detects emotions on all faces in the webcam feed. With a simple 4-layer CNN, the test accuracy reached 67% with average recall of 63% in 40 epochs.<br>
+<img width="837" alt="accuracy_graph" src="https://github.com/TMVKasiViswanath/Emotion-Detection/assets/137616505/d64e9d8d-72ca-4d26-8956-5d35ba084368">
 
 ## Model Architectures
 ### Custom Architecture
